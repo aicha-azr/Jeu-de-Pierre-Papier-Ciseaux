@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    background: linear-gradient( rgb(207, 7, 191), rgb(236, 79, 202));
+    font-family: 'Silkscreen', sans-serif;
+}
+
+.box1,.box{
+    
+    align-self: center;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid rgba(6, 87, 33, 0.356);
+    border-radius: 16px;
+    padding: 2rem;
+    row-gap: 3rem;
+    width: fit-content;
+    box-shadow: 0.1rem 0.1rem 0 0 rgba(0, 0, 0, 0.438);
+}
+.box1 button{
+    cursor: pointer;
+}
+.box{
+    display: none;
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+.box button{
+    color:  rgb(207, 7, 191);
+    background-color: transparent;
+    border: 0rem solid transparent;
+}
+button{
+    background-color: black  ;
+    box-shadow: 0.1rem 0.1rem 0 0 rgba(6, 87, 33, 0.356);
+    color: aliceblue;
+    border-radius: 50%;
+    
+}
+button i{
+    border-radius: 50%;
+    padding: 2rem;
+}
+.box .resultat{
+    align-self: center;
+    flex-direction: column;
+}
+
+.resultat {
+    display: flex;
+    row-gap: 2rem;
+    align-items: center;
+}
+.resultat #paragraphe{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    
+}
+.container button:hover {
+    background-color: rgb(248, 135, 229);
+    color: black;
+}
+@keyframes play {
+    0%,100%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+}
+@keyframes play1 {
+    0%,100%{
+        transform: rotate(-180deg);
+    }
+    50%{
+        transform: rotate(-200deg);
+       
+    }
+}
+
+.active1{
+    animation: play1 0.6s infinite alternate;
+}
+.active{
+    animation: play 0.6s infinite alternate;
+}
+.container,.container2{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.container2 i{
+    font-size: 5rem;
+    color:  rgb(207, 7, 191);
+}
+.container button{
+  cursor: pointer;  
+ align-self: center;
+ font-size: 1.5rem ;
+}
+
+
+span {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+span button{
+    padding: 1rem;
+    border-radius: 45%;
+}
+.container2 #cpuChoice{
+    transform: scale(-1);
+    rotate: 90deg;
+    }
+.container2 #userChoice{
+    rotate: 90deg;
+}
+#userChoice .fa-hand-scissors{
+    rotate: -90deg;
+}
+#cpuChoice .fa-hand-scissors{
+    rotate: 90deg;
+}
+label{
+    font-size: 1.3rem;
+}
